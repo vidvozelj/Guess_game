@@ -33,7 +33,5 @@ def play_game(level):
             print("Your guess is not correct!!")
 
 def get_top_scores():
-    score_list = get_score_list()
-
-    top_scorers = sorted(score_list, key = lambda i: (i['attempts'], i['date']))
+    top_scorers = sorted(get_score_list(), key = lambda i: (i['attempts'], i['date']))
     return top_scorers[:3]
